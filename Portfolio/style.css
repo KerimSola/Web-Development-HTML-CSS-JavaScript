@@ -1,0 +1,1963 @@
+
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+/*Navigation-Bar*/
+header{
+    font-size: larger;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;;
+    font-style: oblique;
+    background-color: rgb(1, 106, 112);
+    height: 60px;
+    margin-top: -19px;
+    margin-left: 0;
+    width: 100%;
+    padding-right: 0px;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);   
+}
+.sve{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:60%;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    padding-top: 15px;
+}
+header li {
+    
+    font-weight: 110px;
+    list-style-type: none;
+
+}
+
+header li a{
+    color:rgb(244, 242, 242);
+    text-decoration: none;
+    font-weight: 110px;
+
+}
+
+.icons{
+    position: relative;
+    left:40%;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+
+
+
+}
+.icons a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.icons a:hover{
+    background-color: white;
+    color:rgb(10, 98, 87);
+    border: 1px solid white;
+    border-radius:20px;
+    padding: 5px;
+}
+
+header li a:hover{
+    color:rgb(10, 98, 87);
+    border: 1px solid white;
+    border-radius:20px;
+    padding: 5px;
+    width: 30px;
+    background-color: white;
+}
+
+
+
+/*Prvi slajd pocetni*/
+.pocetna-slika {
+    height: 700px; /* visina diva */
+    background-image: url('bekph.jpg');
+    background-size: cover; /* prilagođava sliku da pokrije ceo div */
+    background-position: center; /* centrira sliku u divu */
+    margin-left: -10px;
+    background-repeat: no-repeat; /* sprečava ponavljanje slike */
+    /* position: relative; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header-fotografija{
+    width: 320px; /* širina diva */
+    height: 430px; /* visina diva */
+    border:none;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.364);
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+    /* position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-10%, -50%); */
+}
+
+
+/*Ko sam ja?-- slide*/
+.text-o-meni{
+    color: white;
+    width:600px;
+    background-color: rgba(0, 0, 0, 0.364);
+    border:1px;
+    border-radius: 30px;
+    /* position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%); */
+}
+.text-o-meni h1{
+    font-size: 70px;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.text-o-meni h2{
+    font-size: 30px;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+
+ .o-meni{
+
+    height: 550px; /* visina diva */
+    background-color:rgb(10, 98, 87) ;
+    outline-color:white ;
+    background-size: cover ;
+    background-position: relative; /* centrira sliku u divu */
+    background-repeat: no-repeat; /* sprečava ponavljanje slike */
+    margin-left: -8px;
+    margin-top:0px ;
+    margin-right: auto;
+    padding-right: 18px;
+    padding-bottom: 50px;
+    border-top: 1px solid white;
+    border-width: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about-me{
+    width:550px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    font-size: x-large;
+    padding-bottom: 0px;
+    padding-top:15px;
+    padding-right:15px;
+    padding-left:15px;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Dugmic-za-vise{
+    font-size:large;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.Dugmic-za-vise:hover{
+    color: rgb(132, 128, 128);
+
+
+}
+.CijeloDugme{
+    height: 50px;
+    width: 50px;
+}
+.Dugmic-za-izlaz{
+    position: absolute;
+    top: 1%;
+    right: 5%;
+	border: none;
+	padding: 0;
+	width: 30px; height: 30px;
+	border-radius: 50%;
+	background: transparent;
+	color:rgb(93, 92, 92);
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+    padding-left: 20px;
+    font-size: xx-large;
+    font-family: "Nunito",sans-serif;
+    font-weight: 2000px;
+    
+    
+}
+
+.Dugmic-za-izlaz:hover{
+    color: red;
+}
+
+/*Po-Up koji izlazi*/
+.PopUp{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.PopUp.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+}
+.PopUp .PopUp-Box{
+    background: white;
+
+
+    height: 90%;
+    border-radius: 6px;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+    transform: scale(0);
+
+    overflow-y: scroll;
+}
+.PopUp .PopUp-Box p{
+    color:black;
+    font-size: larger;
+}
+
+.PopUp.active .PopUp-Box{
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+    padding: 20px;
+    font-size: larger;
+}
+
+.FitCC-me{
+    width: 720px; /* širina diva */
+    height: 420px; /* visina diva */
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.416);
+}
+
+
+/*Čime se bavim?--slajd*/
+.Poslovi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:rgb(9, 251, 218) ;
+    background-image: url('Pozadina\ za\ 3\ dio.png');
+    size: 600px;
+    background-size: cover; /* prilagođava sliku da pokrije ceo div */
+    background-position: center; /* centrira sliku u divu */
+    height: 500px;
+    border-top: 5px solid rgb(173, 173, 173);
+    border-bottom: 5px solid rgb(173, 173, 173);
+}
+
+.LijevaStrana{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.LijevaStrana h2{
+    width: 760px;
+    font-size: xxx-large;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.DesnaStrana{
+    left: 30%;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.WD{
+    border: none;
+    background-color:rgb(3, 87, 76) ;
+    width: 60%;
+    color: white;
+    font-size: xx-large;
+    border-bottom-left-radius: 50px 50px;
+    border-top-left-radius: 50px 50px;
+    cursor: pointer;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.WD:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliWeb{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+.FF{
+    border: none;
+    background-color:rgb(4, 111, 99) ;
+    width: 60%;
+    color: white;
+    font-size: xx-large;
+    border-bottom-left-radius: 50px 50px;
+    border-top-left-radius: 50px 50px;
+    cursor: pointer;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.FF:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliFoto{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+.SJ{
+    border: none;
+    background-color:rgb(4, 193, 171) ;
+    width: 60%;
+    color: white;
+    font-size: xx-large;
+    border-bottom-left-radius: 50px 50px;
+    border-top-left-radius: 50px 50px;
+    cursor: pointer;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.SJ:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliJezici{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+
+
+/*BOJA= rgb(1, 106, 112);*/
+
+
+/*Vještine---slajd*/
+.Skills{
+    height: 700px;
+    background-color: rgb(230, 226, 226);
+    /*overflow: hidden;*/
+    /*display: flex;
+    overflow: hidden;*/
+    
+}
+/*.Slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}*/
+.nazivi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Skills h1{
+    margin: 0;
+    text-align: center;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    padding-top: 50px;
+    font-size: 400%;
+    color: rgb(1, 106, 112);
+    cursor: pointer;
+    
+}
+.Soft-Skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.SS-Timski-Rad{
+    border: 5px solid rgb(1, 106, 112);
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.SS-Timski-Rad:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-Timski-Rad h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+    padding-left: auto;
+    padding-right: auto;
+}
+.SS-Timski-Rad p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.SS-Timski-Rad:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-Timski-Rad:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-Timski-Rad h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-Timski-Rad p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+.SS-R-P{
+    border: 5px solid rgb(1, 106, 112);
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-R-P h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.SS-R-P p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.SS-R-P:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+
+.SS-R-P:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-R-P:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-R-P h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-R-P p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+.SS-U-V{
+    border: 5px solid rgb(1, 106, 112);
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-U-V h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.SS-U-V p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.SS-U-V:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-U-V:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-U-V:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-U-V h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-U-V p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+.SS-K-R{
+    border: 5px solid rgb(1, 106, 112);
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-K-R h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.SS-K-R p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.SS-K-R:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-K-R:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-K-R:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-K-R h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-K-R p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+.SS-E-R{
+    border: 5px solid rgb(1, 106, 112);
+    width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-E-R h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.SS-E-R p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.SS-E-R:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-E-R:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-E-R:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-E-R h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-E-R p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+
+/*Hard-Skillovi*/
+
+.Hard-Skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.HS-programiranje{
+    border: 5px solid rgb(1, 106, 112);
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.HS-programiranje h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.HS-programiranje p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.HS-programiranje:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-programiranje:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-programiranje:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-programiranje h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.HS-programiranje p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+
+.HS-S-J{
+    border: 5px solid rgb(1, 106, 112);
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.HS-S-J h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.HS-S-J p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.HS-S-J:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-S-J:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-S-J:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-S-J h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.HS-S-J p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+
+
+.HS-Certifikati{
+    border: 5px solid rgb(1, 106, 112);
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.HS-Certifikati h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.HS-Certifikati p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.HS-Certifikati:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-Certifikati:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-Certifikati:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-Certifikati h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.HS-Certifikati p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+
+.HS-PisanjeKodova{
+    border: 5px solid rgb(1, 106, 112);
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.HS-PisanjeKodova h2{
+    color: white;
+    transition: 1.2s;
+    height: 25%;
+}
+.HS-PisanjeKodova p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+.HS-PisanjeKodova:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-PisanjeKodova:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-PisanjeKodova:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-PisanjeKodova h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.HS-PisanjeKodova p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+/*Zavrsni slajd*/
+
+.ZavrsnaForma{
+    height: 300px;
+    background-color:  rgb(3, 145, 152);
+    border-top:3px solid grey ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Opis{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left:20px;
+    color: whitesmoke;
+}
+.Kopirajt{
+    font-size: smaller;
+    font-family: "Lato", sans-serif;
+}
+.Mejl{
+    color:  rgba(255, 255, 255, 0.844);
+    font-size: smaller;
+    position: relative;
+    top: 50px;
+
+}
+.Citat{
+    font-size: xxx-large;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.Slikica img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 100px;
+    top: 60px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 10px  10px 15px rgb(41, 41, 41);
+}
+
+
+/*Prioritetno napravljeno za iPhone 12*/
+@media only screen and (max-width: 600px) {
+    
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+header{
+    font-size: smaller;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;;
+    font-style: oblique;
+    background-color: rgb(1, 106, 112);
+    height: 60px;
+    margin-top: -19px;
+    margin-left: 0;
+    width: 100%;
+    border-bottom: 1px solid white;
+ 
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    padding-top: 25px;
+}
+header li {
+    
+    font-weight: 50px;
+    list-style-type: none;
+
+}
+
+header li a{
+    color:rgb(244, 242, 242);
+    text-decoration: none;
+    font-weight: 50px;
+    width: 40px;
+
+}
+
+.icons{
+    position: relative;
+    left:0px;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+
+
+
+}
+.icons a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.icons a:hover{
+    background-color: white;
+    color:rgb(10, 98, 87);
+    border: 1px solid white;
+    border-radius:20px;
+    padding: 5px;
+}
+
+header li a:hover{
+    color:rgb(10, 98, 87);
+    border: 1px solid white;
+    border-radius:20px;
+    padding: 5px;
+    width: 30px;
+    background-color: white;
+}
+
+.pocetna-slika {
+    height: 700px; /* visina diva */
+    background-image: url('ZaTelefon.png');
+    background-size: cover; /* prilagođava sliku da pokrije ceo div */
+    background-position: center; /* centrira sliku u divu */
+    margin-left: -10px;
+    background-repeat: no-repeat; /* sprečava ponavljanje slike */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.header-fotografija{
+    width: 220px; /* širina diva */
+    height: 330px; /* visina diva */
+    border:none;
+    border-radius: 70px;
+    background-color: rgba(0, 0, 0, 0.364);
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+    /* position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-10%, -50%); */
+}
+
+.text-o-meni{
+    color: white;
+    width:300px;
+    background-color: rgba(0, 0, 0, 0.364);
+    border:1px;
+    border-radius: 30px;
+    /* position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%); */
+}
+.text-o-meni h1{
+    font-size: 40px;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+.text-o-meni h2{
+    font-size: 20px;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+}
+
+ .o-meni{
+
+    height: 70%; /* visina diva */
+    background-color:rgb(10, 98, 87) ;
+    outline-color:white ;
+    background-size: cover ;
+    background-position: relative; /* centrira sliku u divu */
+    background-repeat: no-repeat; /* sprečava ponavljanje slike */
+    margin-left: -8px;
+    margin-top:0px ;
+    margin-right: auto;
+    padding-right: 18px;
+    padding-bottom: 50px;
+    border-top: 1px solid white;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about-me{
+    width:300px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    font-size: large;
+    padding-bottom: 0px;
+    padding-top:15px;
+    padding-right:15px;
+    padding-left:15px;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Dugmic-za-vise{
+    font-size:large;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.Dugmic-za-vise:hover{
+    color: rgb(132, 128, 128);
+
+
+}
+.CijeloDugme{
+    height: 50px;
+    width: 50px;
+}
+.Dugmic-za-izlaz{
+    position: absolute;
+    top: 1%;
+    right: 10%;
+	border: none;
+	padding: 0;
+	width: 30px; height: 30px;
+	border-radius: 50%;
+	background: transparent;
+	color:rgb(93, 92, 92);
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+    padding-left: 20px;
+    font-size: xx-large;
+    font-family: "Nunito",sans-serif;
+    font-weight: 2000px;
+    
+    
+}
+
+.Dugmic-za-izlaz:hover{
+    color: red;
+}
+
+.PopUp{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.PopUp.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+    width: 330px;
+}
+.PopUp .PopUp-Box{
+    background: white;
+
+
+    height: 90%;
+    border-radius: 6px;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, 1.99);
+    transform: scale(0);
+
+    overflow-y: scroll;
+}
+.PopUp .PopUp-Box p{
+    color:black;
+    font-size: larger;
+}
+
+.PopUp.active .PopUp-Box{
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+    padding: 20px;
+    font-size: larger;
+}
+
+.FitCC-me{
+    width: 320px; /* širina diva */
+    height: 200px; /* visina diva */
+    border: none;
+    border-radius: 50px;
+    box-shadow: 10px 7px  0px rgba(0, 0, 0, 0.416);
+}
+
+.Poslovi{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color:rgb(9, 251, 218) ;
+    background-image: url('Pozadina\ za\ 3\ dio.png');
+    size: 600px;
+    background-size: cover; /* prilagođava sliku da pokrije ceo div */
+    background-position: center; /* centrira sliku u divu */
+    height: 500px;
+    border-top: 5px solid rgb(173, 173, 173);
+    border-bottom: 5px solid rgb(173, 173, 173);
+}
+
+.LijevaStrana{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60%;
+}
+.LijevaStrana h2{
+    width: 120%;
+    font-size: xx-large;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    height: 0%;
+}
+
+.DesnaStrana{
+
+    width: 45%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    object-position: right;
+    padding-left: auto;
+    margin-right: auto;
+}
+
+
+.WD{
+    border: none;
+    background-color:rgb(3, 87, 76) ;
+    width: 100%;
+    color: white;
+    font-size: large;
+    border-bottom-right-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    border-bottom-left-radius: 0px 00px;
+    border-top-left-radius: 0px 0px;
+
+    cursor: pointer;
+}
+.WD:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliWeb{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+.FF{
+    border: none;
+    background-color:rgb(4, 111, 99) ;
+    width: 100%;
+    color: white;
+    font-size: large;
+    border-bottom-right-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    border-bottom-left-radius: 0px 00px;
+    border-top-left-radius: 0px 0px;
+
+
+    cursor: pointer;
+
+}
+.FF:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliFoto{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+.SJ{
+    border: none;
+    background-color:rgb(4, 193, 171) ;
+    width: 100%;
+    color: white;
+    font-size: large;
+    border-bottom-right-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    border-bottom-left-radius: 0px 00px;
+    border-top-left-radius: 0px 0px;
+
+    cursor: pointer;
+    
+}
+.SJ:hover{
+    width: 80%;
+    transition: 0.8s;
+}
+.CijeliJezici{
+    display: flex;
+    justify-content: right;
+    height: 34%;
+}
+
+
+/*BOJA= rgb(1, 106, 112);*/
+
+.Skills{
+    height: 700px;
+    background-color: rgb(230, 226, 226);
+    /*overflow: hidden;*/
+    /*display: flex;
+    overflow: hidden;*/
+    
+}
+/*.Slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}*/
+.nazivi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Skills h1{
+    margin: 0;
+    text-align: center;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    padding-top: 50px;
+    font-size: 200%;
+    color: rgb(1, 106, 112);
+    cursor: pointer;
+    
+}
+.Soft-Skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    overflow-x: auto;
+}
+.Soft-Skills::-webkit-scrollbar{
+    width: 0;
+}
+
+.SS-Timski-Rad{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.SS-Timski-Rad:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-Timski-Rad:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-Timski-Rad:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 70%;
+}
+
+.SS-Timski-Rad h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 10%;
+
+}
+.SS-Timski-Rad p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+
+.SS-R-P{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-R-P:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-R-P:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-R-P:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 70%;
+}
+
+.SS-R-P h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 15%;
+
+}
+.SS-R-P p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+.SS-U-V{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-U-V:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-U-V:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-U-V:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-U-V h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 15%;
+
+}
+.SS-U-V p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+.SS-K-R{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+.SS-K-R:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-K-R:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-K-R:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-K-R h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 15%;
+
+}
+.SS-K-R p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+.SS-E-R{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.SS-E-R:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.SS-E-R:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.SS-E-R:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.SS-E-R h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.SS-E-R p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 70%;
+
+}
+
+
+/*Hard-Skillovi*/
+
+.Hard-Skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.HS-programiranje{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.HS-programiranje:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-programiranje:hover h2{
+    color: white;
+    transition: 1.2s;
+    
+}
+.HS-programiranje:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-programiranje h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    padding-left: -10px;
+    height: 7%;
+
+}
+.HS-programiranje p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+
+
+.HS-S-J{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.HS-S-J:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-S-J:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-S-J:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-S-J h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 15%;
+
+}
+.HS-S-J p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+
+
+
+.HS-Certifikati{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.HS-Certifikati:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-Certifikati:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-Certifikati:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-Certifikati h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+
+}
+.HS-Certifikati p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+
+
+.HS-PisanjeKodova{
+    border: 5px solid rgb(1, 106, 112);
+    min-width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius:50px;
+    box-shadow: 0px 10px 15px 2px rgb(1, 106, 112);
+    color:rgb(1, 106, 112) ;
+
+}
+
+.HS-PisanjeKodova:hover{
+    background-color:rgb(1, 106, 112) ;
+    color: white;
+    height: 450px;
+    transition: 1.2s;
+}
+.HS-PisanjeKodova:hover h2{
+    color: white;
+    transition: 1.2s;
+}
+.HS-PisanjeKodova:hover p{
+    color: white;
+    transition: 1.2s;
+    height: 80%;
+}
+
+.HS-PisanjeKodova h2{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(1, 106, 112);
+    font-size: xx-large;
+    font-style: italic;
+    height: 15%;
+
+}
+.HS-PisanjeKodova p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(1, 106, 112) ;
+    height: 100%;
+
+}
+
+
+
+.ZavrsnaForma{
+    height: 600px;
+    background-color:  rgb(3, 145, 152);
+    border-top:3px solid grey ;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Opis{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left:20px;
+    color: whitesmoke;
+}
+.Kopirajt{
+    font-size: small;
+    font-family: "Lato", sans-serif;
+    width: 90%;
+    text-align: center;
+}
+
+.Mejl{
+    color:  rgba(255, 255, 255, 0.844);
+    font-size: smaller;
+    position: relative;
+    top: 50px;
+
+}
+.Citat{
+    font-size: xxx-large;
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    width: 90%;
+    text-align: center;
+}
+
+.Slikica img{
+    width: 200px;
+    height: 200px;
+    margin-left: 50%;
+    margin-right: auto;
+    top: 60px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 10px  10px 15px rgb(41, 41, 41);
+}
+  }
